@@ -1,3 +1,6 @@
+#THIS IS THE ONE YOU RUN IF YOU WANNA CHAT
+
+
 #!/usr/bin/env python3
 # chat.py - Interactive terminal chat interface
 import sys
