@@ -80,9 +80,9 @@ ANALYSIS REQUIREMENTS:
    - Language and tone issues
 Please provide a thorough, structured analysis."""
 
-    print("\n" + "=" * 80)
+    print("\n" + "=" * 70)
     print(" " * 25 + "SCAM MESSAGE ANALYSIS")
-    print("=" * 80 + "\n")
+    print("=" * 70 + "\n")
     
     print("Analyzing message (this may take 30-60 seconds for detailed analysis)...\n")
     
@@ -91,9 +91,9 @@ Please provide a thorough, structured analysis."""
     
     # Display results
     print("ANALYSIS RESULTS:")
-    print("-" * 80)
+    print("-" * 70)
     print(response)
-    print("\n" + "=" * 80 + "\n")
+    print("\n" + "=" * 70 + "\n")
 
 if __name__ == "__main__":
     analyze_scam_message()
