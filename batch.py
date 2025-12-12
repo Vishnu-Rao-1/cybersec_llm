@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # batch_analyze.py - Batch analyze scam messages from Google Sheets CSV
 
+
+#THIS IS THE ONE YOU WANNA RUN IF YOU HAVE A CSV FILE!!!
 import sys
 import pandas as pd
 from pathlib import Path
