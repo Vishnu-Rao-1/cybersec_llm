@@ -44,7 +44,7 @@ def check_requirements():
             print(f"    {rel_path}")
         
         print("\n    Setup Instructions:")
-        print("   " + "-" * 66)
+        print("   " + "-" * 70)
         print("   1. Ensure 'testmenow.jsonl' is in the project folder")
         print("   2. Run: python3 1_buildKnowledge.py")
         print("   3. Run: python3 2_buildSearch.py")
