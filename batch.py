@@ -23,9 +23,9 @@ def analyze_scam_batch(input_file: str, output_file: str = None):
     """
     
     # Initialize system
-    print("\n" + "=" * 80)
+    print("\n" + "=" * 70)
     print(" " * 25 + "BATCH SCAM ANALYSIS")
-    print("=" * 80 + "\n")
+    print("=" * 70 + "\n")
     
     if not initialize():
         print("[ERROR] Failed to initialize system")
@@ -72,14 +72,14 @@ def analyze_scam_batch(input_file: str, output_file: str = None):
     
     # Process each message with real-time display
     print("[INFO] Analyzing messages...\n")
-    print("=" * 80)
+    print("=" * 70)
     
     for idx in range(len(df)):
         message = df.loc[idx, 'scam_messages']
         
         # Display progress header
         print(f"\n[Message {idx + 1}/{len(df)}]")
-        print("-" * 80)
+        print("-" * 70)
         
         # Skip empty messages
         if pd.isna(message) or str(message).strip() == '':
@@ -124,7 +124,7 @@ Please provide a thorough, structured analysis."""
             
             # Generate analysis
             context = retrieve_context(prompt, top_k=5)
-            analysis = generate_response(prompt, context, max_tokens=800)
+            analysis = generate_response(prompt, context, max_tokens=700)
             
             # Store result
             df.loc[idx, 'ai_responses'] = analysis
@@ -147,9 +147,9 @@ Please provide a thorough, structured analysis."""
             df.to_csv(output_file, index=False)
     
     # Final summary
-    print("\n" + "=" * 80)
+    print("\n" + "=" * 70)
     print(" " * 32 + "SUMMARY")
-    print("=" * 80)
+    print("=" * 70)
     
     completed = len([r for r in df['ai_responses'] if r and not r.startswith('[ERROR')])
     errors = len([r for r in df['ai_responses'] if r and r.startswith('[ERROR')])
@@ -161,7 +161,7 @@ Please provide a thorough, structured analysis."""
     print(f"  [SKIPPED] Skipped: {skipped}")
     print(f"\n  Results saved to: {output_file}")
     print("\n  [TIP] Import this CSV back into Google Sheets to see results!")
-    print("=" * 80 + "\n")
+    print("=" * 70 + "\n")
 
 
 if __name__ == "__main__":
